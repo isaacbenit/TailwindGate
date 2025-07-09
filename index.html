@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      @layer utilities {
+        /* Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+
+        .no-scrollbar {
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
+      }
+    </style>
   </head>
   <body class="overflow-x-hidden">
     <!-- navbar -->
@@ -88,7 +101,7 @@
     <!-- home section -->
     <section class="hidden lg:inline sticky top-0 z-20">
       <div
-        class="lg:bg-blue-900 lg:text-white lg:mr-6 lg:mx-20 pl-10 py-10 pr-50 rounded-md mt-5 "
+        class="lg:bg-blue-900 lg:text-white lg:mr-6 lg:mx-20 pl-10 py-10 pr-50 rounded-md mt-5"
       >
         <ul class="lg:flex hidden gap-6 relative">
           <li class="hover:border-b-2 hover:border-yellow-400">HOME</li>
@@ -97,13 +110,15 @@
           <li class="hover:border-b-2 hover:border-yellow-400">MANAGEMENT</li>
           <li class="hover:border-b-2 hover:border-yellow-400">ABOUT</li>
           <li class="hover:border-b-2 hover:border-yellow-400">CAREERS</li>
-          <li class="hover:border-b-2 hover:border-yellow-400">NEWS & EVENTS</li>
+          <li class="hover:border-b-2 hover:border-yellow-400">
+            NEWS & EVENTS
+          </li>
         </ul>
       </div>
     </section>
     <!-- member first section  -->
     <section>
-      <div class="absolute lg:-mt-10 mt-2 ">
+      <div class="absolute lg:-mt-10 mt-2">
         <img
           src="images/image.jpeg"
           alt=""
@@ -111,7 +126,7 @@
         />
       </div>
       <div class="flex">
-        <div class="relative w-2/3 pl-20 mt-5 ">
+        <div class="relative w-2/3 pl-20 mt-5">
           <h1 class="lg:text-2xl text-sm mt-20">
             <span class="text-yellow-400">Member First </span>, data-driven,
             evidence- <br />based and high performing organization.
@@ -134,8 +149,12 @@
     <!-- paragraph with words -->
     <section class="bg-gray-100">
       <div class="lg:-mt-12 mt-30">
-        <div class="flex flex-row  lg:w-screen lg:ml-30 overflow-x-scroll">
-          <div class="rounded-md lg:w-1/5 bg-white relative border-r-4 border-gray-100 p-7 hover:-mt-5">
+        <div
+          class="flex flex-row lg:w-screen lg:ml-30 overflow-x-scroll no-scrollbar"
+        >
+          <div
+            class="rounded-md lg:w-1/5 bg-white relative border-r-4 border-gray-100 p-7 hover:-mt-5"
+          >
             <img
               src="./images/Screenshot 2025-07-09 133537.png"
               alt=""
@@ -148,7 +167,9 @@
               covered by RSSB services
             </p>
           </div>
-          <div class="rounded-md lg:w-1/5 bg-white relative border-r-4 border-gray-100 p-7 hover:-mt-5">
+          <div
+            class="rounded-md lg:w-1/5 bg-white relative border-r-4 border-gray-100 p-7 hover:-mt-5"
+          >
             <img
               src="./images/Screenshot 2025-07-09 133537.png"
               alt=""
@@ -161,7 +182,9 @@
               your safety and well-being.
             </p>
           </div>
-          <div class="rounded-md lg:w-1/5 bg-white relative border-r-4 border-gray-100 hover:-mt-5">
+          <div
+            class="rounded-md lg:w-1/5 bg-white relative border-r-4 border-gray-100 hover:-mt-5"
+          >
             <img
               src="./images/Screenshot 2025-07-09 133537.png"
               alt=""
@@ -211,25 +234,37 @@
       <!-- first boxes -->
       <div class="lg:flex flex-row flex-col justify-around gap-3 mx-10">
         <div
-          class="group border-1 p-10 hover:bg-[url('./images/image10.jpeg')]  bg-cover text-center lg:w-1/3"
+          class="group border-1 p-10 hover:bg-[url('./images/image10.jpeg')] bg-cover text-center lg:w-1/3"
         >
           <img src="images/public.svg" alt="" class="w-1/6 mx-auto" />
-          <h2 class="text-blue-800 font-bold group-hover:text-yellow-400 group-hover:brightness-90">Pension scheme</h2>
-          <h4 class="text-bold group-hover:text-white ">Retired with diginity</h4>
+          <h2
+            class="text-blue-800 font-bold group-hover:text-yellow-400 group-hover:brightness-90"
+          >
+            Pension scheme
+          </h2>
+          <h4 class="text-bold group-hover:text-white">
+            Retired with diginity
+          </h4>
         </div>
         <div
           class="group border-1 p-10 hover:bg-[url('./images/image5.jpeg')] hover:brightness-90 bg-cover text-center lg:w-1/3"
         >
           <img src="./images/public12.svg" alt="" class="w-1/6 mx-auto" />
-          <h2 class="text-blue-800 font-bold group-hover:text-yellow-400">ocupational hazard</h2>
+          <h2 class="text-blue-800 font-bold group-hover:text-yellow-400">
+            ocupational hazard
+          </h2>
           <h4 class="text-bold group-hover:text-white">we are here for you</h4>
         </div>
         <div
-          class=" group border-1 p-10 hover:bg-[url('./images/image6.jpeg')] hover:brightness-80 bg-cover text-center lg:w-1/3"
+          class="group border-1 p-10 hover:bg-[url('./images/image6.jpeg')] hover:brightness-80 bg-cover text-center lg:w-1/3"
         >
           <img src="./images/public4.svg" alt="" class="w-1/6 mx-auto" />
-          <h2 class="text-blue-800 font-bold group-hover:text-yellow-400">medical scheme</h2>
-          <h4 class="text-bold group-hover:text-white font-bold">our health our future</h4>
+          <h2 class="text-blue-800 font-bold group-hover:text-yellow-400">
+            medical scheme
+          </h2>
+          <h4 class="text-bold group-hover:text-white font-bold">
+            our health our future
+          </h4>
         </div>
       </div>
       <!-- second layer -->
@@ -238,21 +273,33 @@
           class="group border-1 p-10 hover:bg-[url('./images/image41.jpeg')] hover:brightness-90 bg-cover text-center"
         >
           <img src="images/public2.svg" alt="" class="w-1/6 mx-auto" />
-          <h2 class="text-blue-800 font-bold group-hover:text-yellow-400">CBHI scheme</h2>
-          <h4 class="text-bold group-hover:text-white font-bold">giving your happiness at your best rate</h4>
+          <h2 class="text-blue-800 font-bold group-hover:text-yellow-400">
+            CBHI scheme
+          </h2>
+          <h4 class="text-bold group-hover:text-white font-bold">
+            giving your happiness at your best rate
+          </h4>
         </div>
         <div
-          class=" group border-1 p-10 hover:bg-[url('./images/image3.jpeg')] hover:brightness-90 bg-cover text-center"
+          class="group border-1 p-10 hover:bg-[url('./images/image3.jpeg')] hover:brightness-90 bg-cover text-center"
         >
           <img src="./images/public12.svg" alt="" class="w-1/6 mx-auto" />
-          <h2 class="text-blue-800 font-bold group-hover:text-yellow-400 group-brightness-100">Ejo heza</h2>
-          <h4 class="text-bold group-hover:text-white font-bold">start early and reap the results</h4>
+          <h2
+            class="text-blue-800 font-bold group-hover:text-yellow-400 group-brightness-100"
+          >
+            Ejo heza
+          </h2>
+          <h4 class="text-bold group-hover:text-white font-bold">
+            start early and reap the results
+          </h4>
         </div>
         <div
-          class=" group border-1 p-10 hover:bg-[url('./images/image8.jpeg')]  bg-cover text-center"
+          class="group border-1 p-10 hover:bg-[url('./images/image8.jpeg')] bg-cover text-center"
         >
           <img src="./images/public3.svg" alt="" class="w-1/6 mx-auto" />
-          <h2 class="text-blue-800 font-bold group-hover:text-yellow-400">maternity leave</h2>
+          <h2 class="text-blue-800 font-bold group-hover:text-yellow-400">
+            maternity leave
+          </h2>
           <h4 class="text-bold group-hover:text-white font-bold">
             enjoy your maternity leave with your full salary
           </h4>
@@ -280,7 +327,11 @@
             Get started
           </button>
         </div>
-        <img src="./images/public (1).jpeg" alt="" class="lg:w-1/2 overflow-x-scroll" />
+        <img
+          src="./images/public (1).jpeg"
+          alt=""
+          class="lg:w-1/2 overflow-x-scroll"
+        />
       </div>
     </section>
     <!-- digital trans -->
@@ -346,7 +397,9 @@
       </div>
     </section>
     <!-- single paragraph -->
-    <div class="lg:text-2xl text-sm border-l-2 border-yellow-400 mx-20 p-6  mt-10 w-1/2 ">
+    <div
+      class="lg:text-2xl text-sm border-l-2 border-yellow-400 mx-20 p-6 mt-10 w-1/2"
+    >
       <p class="ml-2">
         “We have ambitious plans to transform RSSB, by 2025, into an
         organisation that is not just fully committed to delivering for our
@@ -359,7 +412,7 @@
         thought-leader in social policy; as the leading strategic investor in
         our chosen markets; and as a prudent but ambitious business partner."
       </p>
-      <div class="flex text-sm  mt-5">
+      <div class="flex text-sm mt-5">
         <img
           src="./images/image (2).jpeg"
           alt=""
@@ -376,100 +429,101 @@
       <h1 class="text-2xl text-blue-900">news & events</h1>
     </div>
     <!-- under New events  -->
-     <section class="lg:flex flex-row flex-col mx-20 gap-10 mt-20 ">
+    <section class="lg:flex flex-row flex-col mx-20 gap-10 mt-20">
       <div class="mb-10">
-        <img
-          src="./images/image (9).jpeg"
-          alt=""
-          class="mb-4"
-        />
+        <img src="./images/image (9).jpeg" alt="" class="mb-4" />
         <h5 class="text-sm mb-4">7 months ago</h5>
         <h1 class="text-blue-900 font-bold mb-4">
-          RSSB Engages the Private Sector on  <br /> Pension Reforms and ...
-          and systems
+          RSSB Engages the Private Sector on <br />
+          Pension Reforms and ... and systems
         </h1>
-            <p class=" border-b-1 pb-5 mb-3">
-          Kigali: Thursday, November 28th, 2024 – The Rwanda Social Security Board (RSSB) engaged with the private sector to discuss upcoming pension reforms, h...
-        </p >
+        <p class="border-b-1 pb-5 mb-3">
+          Kigali: Thursday, November 28th, 2024 – The Rwanda Social Security
+          Board (RSSB) engaged with the private sector to discuss upcoming
+          pension reforms, h...
+        </p>
         <h5>Read more ...</h5>
       </div>
       <div class="mb-10">
-        <img
-          src="./images/image (1).jpeg"
-          alt=""
-          class="mb-4 lg:h-56"
-        />
+        <img src="./images/image (1).jpeg" alt="" class="mb-4 lg:h-56" />
         <h5 class="text-sm mb-4">7 months ago</h5>
         <h1 class="text-blue-900 font-bold mb-4">
-          RSSB Engages the Private Sector on  <br /> Pension Reforms and ...
-          and systems
+          RSSB Engages the Private Sector on <br />
+          Pension Reforms and ... and systems
         </h1>
-            <p class=" border-b-1 pb-5 mb-3">
-          Kigali: Thursday, November 28th, 2024 – The Rwanda Social Security Board (RSSB) engaged with the private sector to discuss upcoming pension reforms, h...
-        </p >
+        <p class="border-b-1 pb-5 mb-3">
+          Kigali: Thursday, November 28th, 2024 – The Rwanda Social Security
+          Board (RSSB) engaged with the private sector to discuss upcoming
+          pension reforms, h...
+        </p>
         <h5>Read more ...</h5>
       </div>
-       <div class="mb-10">
-        <img
-          src="./images/image (7).jpeg"
-          alt=""
-          class="mb-4"
-        />
+      <div class="mb-10">
+        <img src="./images/image (7).jpeg" alt="" class="mb-4" />
         <h5 class="text-sm mb-4">7 months ago</h5>
         <h1 class="text-blue-900 font-bold mb-4">
-          RSSB Engages the Private Sector on  <br /> Pension Reforms and ...
-          and systems
+          RSSB Engages the Private Sector on <br />
+          Pension Reforms and ... and systems
         </h1>
-            <p class=" border-b-1 pb-5 mb-3">
-          Kigali: Thursday, November 28th, 2024 – The Rwanda Social Security Board (RSSB) engaged with the private sector to discuss upcoming pension reforms, h...
-        </p >
+        <p class="border-b-1 pb-5 mb-3">
+          Kigali: Thursday, November 28th, 2024 – The Rwanda Social Security
+          Board (RSSB) engaged with the private sector to discuss upcoming
+          pension reforms, h...
+        </p>
         <h5>Read more ...</h5>
       </div>
-     </section>
-     <!-- single button  -->
-      <div class="text-center">
-      <button class="border-blue-900 border-2 mx-100 font-bold py-3 px-10 rounded-md mt-7 mb-10 hover:bg-blue-900 hover:text-white"> View more
-          </button></div>
+    </section>
+    <!-- single button  -->
+    <div class="text-center">
+      <button
+        class="border-blue-900 border-2 mx-100 font-bold py-3 px-10 rounded-md mt-7 mb-10 hover:bg-blue-900 hover:text-white"
+      >
+        View more
+      </button>
+    </div>
 
     <!-- footer  -->
-     <footer class="bg-gray-100 w-screen pt-5">
-        <div class="lg:flex flex-row flex-col px-20 justify-between mt-20 ">
-            <div class="mb-10">
-        <h1 class="text-blue-900 text-xl font-bold mb-6 mt-10">Get in touch </h1>
-           <ul class="text-sm ">
+    <footer class="bg-gray-100 w-screen pt-5">
+      <div class="lg:flex flex-row flex-col px-20 justify-between mt-20">
+        <div class="mb-10">
+          <h1 class="text-blue-900 text-xl font-bold mb-6 mt-10">
+            Get in touch
+          </h1>
+          <ul class="text-sm">
             <li class="mb-2">KN 3 Rd African Union Boulevard</li>
             <li class="mb-2">Kiyovu, Nyarugenge</li>
             <li class="mb-2">P.O Box 250/6655 Kigali-Rwanda</li>
             <li class="mb-2">Tel: 4044 Toll free line</li>
-            <li class="mb-2 ml-4">      5006 EjoHeza</li>
-           </ul>
-      </div>
-      <div class="mb-10">
-        <h1 class="text-blue-900 text-xl font-bold mb-6 mt-10">Important Links </h1>
-           <ul class="text-sm ">
+            <li class="mb-2 ml-4">5006 EjoHeza</li>
+          </ul>
+        </div>
+        <div class="mb-10">
+          <h1 class="text-blue-900 text-xl font-bold mb-6 mt-10">
+            Important Links
+          </h1>
+          <ul class="text-sm">
             <li class="mb-2">Tenders</li>
             <li class="mb-2">Gallery</li>
             <li class="mb-2">Announcements</li>
             <li class="mb-2">Privacy Policy</li>
-           </ul>
-      </div>
-      <div class="mb-10 ">
-        <h1 class="text-blue-900 text-xl font-bold mb-6 mt-10">services </h1>
-           <ul class="text-sm ">
+          </ul>
+        </div>
+        <div class="mb-10">
+          <h1 class="text-blue-900 text-xl font-bold mb-6 mt-10">services</h1>
+          <ul class="text-sm">
             <li class="mb-2">Apply for employee number</li>
             <li class="mb-2">Check for your contributions</li>
             <li class="mb-2">Pay employee contributions</li>
             <li class="mb-2">Pension simulator</li>
-            <li class="mb-2 "> RSSB clearance certificate</li>
-           </ul>
-      </div>     
+            <li class="mb-2">RSSB clearance certificate</li>
+          </ul>
         </div>
-         <div>
-        <hr class="text-gray-400 mb-5 mx-20">
+      </div>
+      <div>
+        <hr class="text-gray-400 mb-5 mx-20" />
         <p class="mx-20 p-10">© 2025 Rwanda Social Security Board</p>
-      </div> 
-     </footer>
-     <!-- last thing  -->
-       
+      </div>
+    </footer>
+    <!-- last thing  -->
   </body>
 </html>
